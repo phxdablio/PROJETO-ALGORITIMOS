@@ -3,8 +3,6 @@
 #include <string.h>
 #include <conio.h>
 
-
-
 /*
 
 Nome: Gabriel Eirado Amaral     Matrícula: UC22200242     Curso: Ciência da Computação
