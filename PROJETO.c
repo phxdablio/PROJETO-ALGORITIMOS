@@ -8,11 +8,11 @@
 
 int main(){
     //PARA A PRIMEIRA SESSAO
-    char aux1, pSexo[100];
-    int i, qPessoas, pIdade[100], aux2 = 1, qMasc = 0, qFemi = 0, aux3 = 0, aux4 = 0;
-    float dinheiro = 0;
+    char aux1, pSexo[100]; //Variáveis do tipo char e string
+    int i, qPessoas, pIdade[100], aux2 = 1, qMasc = 0, qFemi = 0, aux3 = 0, aux4 = 0; //Váriaveis do tipo inteiro 
+    float dinheiro = 0;// Variavel do tipo real 
     
-    float coletarPreco(float *d, int *aux3, int *aux4);
+    float coletarPreco(float *d, int *aux3, int *aux4); //
     int classificacao(int v[], int Q);
     int maioridade(int v[], char s[], int Q);
 
