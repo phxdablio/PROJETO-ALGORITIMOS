@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#include <conio.h>
 
 /*
 
@@ -12,6 +8,12 @@ Nome: Thiago Litiery Campelo Moreira     Matrícula: UC22200076     Curso: Ciên
 Nome: Pedro Henrique Oliveira Marques     Matrícula: UC22103216     Curso: Ciência da Computação 
 
 */
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <conio.h>
+
 
 int main(){
     //PARA A PRIMEIRA SESSAO
