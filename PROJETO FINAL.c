@@ -1,12 +1,8 @@
-
-/*
-
-Nome: Gabriel Eirado Amaral     Matrícula: UC22200242     Curso: Ciência da Computação
+/* Nome: Gabriel Eirado Amaral     Matrícula: UC22200242     Curso: Ciência da Computação
 
 Nome: Thiago Litiery Campelo Moreira     Matrícula: UC22200076     Curso: Ciência da Computação 
 
 Nome: Pedro Henrique Oliveira Marques     Matrícula: UC22103216     Curso: Ciência da Computação 
-
 */
 
 #include <stdio.h>
@@ -30,46 +26,49 @@ int main(){
     int  qPessoas2, pIdade2[100], aux22 = 1, qMasc2 = 0, qFemi2 = 0, aux32 = 0, aux42 = 0; //Variáveis do tipo inteiro 
     float dinheiro2 = 0; //Variável do tipo real
 
-    printf("Quantas sessoes serao no dia? "); //Mostra na tela
+    printf("Projeto Final feito por: Gabriel Eirado Amaral; Matrícula: UC22200242; Curso: Ciência da Computação | Thiago Litiery Campelo Moreira; Matrícula: UC22200076; Curso: Ciência da Computação | Pedro Henrique Oliveira Marques; Matrícula: UC22103216; Curso: Ciência da Computação")
+
+    printf("Olá, usuario! Seja bem vindo!!! Como vai o seu dia? Por gentileza, informe quantas sessoes serao no dia? Obrigado!"); //Mostra na tela
     scanf("%c", &aux1); //Coleta variável auxiliar para o switch case
 
     switch (aux1){
         case '1': //Condicional da variável auxiliar == 1
             
-            printf("Quantas pessoas vao assistir o filme: "); //Mostra na tela
+            printf("Por favor, usuario, agora digite quantas pessoas vao assistir o filme: "); //Mostra na tela
             scanf("%d", &qPessoas); //Coleta a quantidade de pessoas para o programa
             
             if(qPessoas < 10){  //Não aceita menos de 10 pessoas
-                printf("O numero minimo sao 10 pessoas"); //Mostra na tela
+                printf("Lamentamos, usuario, o numero minimo sao de 10 pessoas..."); //Mostra na tela
                 }else{
                     for(i = 0 ; i < qPessoas ; i++){ //Loop para as coletas de informações de todas as  pessoas
-                        printf("Qual e o sexo da %d pessoa: o (M -masculino, F - Feminino): ", aux2); //Mostra na tela
+                        printf("Por favor, usuario, informe qual e o sexo da %d pessoa: o (M -masculino, F - Feminino): ", aux2); //Mostra na tela
                         fflush(stdin); //Limpa a memória evitando problemas no scanf
                         scanf("%c", &pSexo[i]); //Coleta o sexo de cada pessoa
                         pSexo[i] = toupper(pSexo[i]); //Transforma o sexo do usuario toda em maiúsculo evitando erros em condicionais
 
-                        printf("Digite a idade da %d pessoa: ", aux2); //Mostra na tela
+                        printf("Agora, digite a idade da %d pessoa: ", aux2); //Mostra na tela
                         fflush(stdin); //Limpa a memoria evitando problemas no scanf
                         scanf("%d", &pIdade[i]); //Coleta a idade de cada pessoa 
                         
                         if(pIdade[i] < 3 || pIdade[i] > 100){ //idade não pode se menor que 3 anos e maior que 100 anos
-                            printf("\nIdade invalida\n"); //Mostra na tela
+                            printf("\nLamentamos, usuario... Idade invalida\n"); //Mostra na tela
                             }else
                                 coletarPreco(&dinheiro, &aux3, &aux4); //chamada da função por referência coletando dinheiro e as variáveis auxiliares e exibe a opção de meio ou inteira
                         
                     aux2++; //Variável auxiliar que mostra em qual parte do loop estamos
-                    }                  
+                    }//for  ////Conceito do capítulo 4: "Comentários" - Comentários ao lado de Chaves de Fechamento (pág. 67): "Às vezes, os programadores colocam comentários especiais ao lado das chaves de fechamento..." (Como nesse caso, linha 59 dese algoritmo, e também na linha 71).                
+                           //// "Embora isso possa fazer sentido em funções longas com estruturas muito aninhadas, só serve para amontoar o tipo de funções pequenas e encapsuladas que preferimos. Portanto, se perceber uma vontade de comentar ao lado de chaves de fechamento, tente primeiro reduzir suas funções."
                     
                     system("cls"); //Limpa tudo escrito até agora
                     printf("\nO filme e Interstellar\n"); //Mostra na tela
                     
                     for(i = 0; i <= qPessoas; i++){ //Loop para a contagem de pessoas de cada sexo
-                        if(pSexo[i] == 'M')
+                        if(pSexo[i] == 'M') ////Conceito do capítulo 5: "Formatação" - Continuidade Vertical (pág. 78): "Se o espaçamento separa conceitos, então a continuidade vertical indica uma associação íntima." - Continua na linha 67.
                             qMasc++;
-                        if(pSexo[i] == 'F')
+                        if(pSexo[i] == 'F')////"Linhas de código que estão intimamente relacionadas devem aparecer verticalmente unidas" Como por exemplo a linha 65 até a 67.
                             qFemi++;
                         
-                    }
+                    }//for ////Conceito do capítulo 4: "Comentários" - Comentários ao lado de Chaves de Fechamento (pág. 67)
                     
                     printf("Sao %d do sexo masculino e %d do sexo feminino que assistiram o filme\n", qMasc, qFemi); //Mostra na tela
 
@@ -87,31 +86,31 @@ int main(){
                                 printf("A quantidade de inteiras foi maior, %d inteiras e %d meias", aux4, aux3);
                 }
 
-            printf("\npressione qualquer tecla para finalizar:  "); //Mostra na tela
+            printf("\nPor gentileza, usuario, pressione qualquer tecla para finalizar:  "); //Mostra na tela
             getch(); //Usado para pausar o programa
             break; //Termina o case == 1
 
-        case '2':   // Conndicional da variavel auxiliar == 2
+        case '2':   // Condicional da variavel auxiliar == 2
 
             //Primeira sessão
-            printf("Quantas pessoas vao assistir a primeira sessao: "); //Mostra na tela
+            printf("Usuario, poderia informar quantas pessoas vao assistir a primeira sessao? "); //Mostra na tela
             scanf("%d", &qPessoas); //Coleta a quantidade de pessoas para o programa
             
             if(qPessoas < 10){ //Não aceita menos de 10 pessoas
-                printf("O numero minimo sao 10 pessoas"); //Mostra na tela
+                printf("Lamentamos, usuario, o numero minimo sao 10 pessoas"); //Mostra na tela
                 }else{
                     for(i = 0 ; i < qPessoas ; i++){ //Loop para as coletas de informações de todas as  pessoas
-                        printf("Qual e o sexo da %d pessoa: o (M -masculino, F - Feminino): ", aux2); //Mostra na tela
+                        printf("Por favor, informe qual e o sexo da %d pessoa: o (M -masculino, F - Feminino): ", aux2); //Mostra na tela
                         fflush(stdin); //Limpa a memória evitando problemas no scanf
                         scanf("%c", &pSexo[i]); //Coleta o sexo de cada pessoa
                         pSexo[i] = toupper(pSexo[i]); //Transforma o sexo do usuario toda em maiúsculo evitando erros em condicionais
 
-                        printf("Digite a idade da %d pessoa: ", aux2); //Mostra na tela
+                        printf("Agora, por favor, digite a idade da %d pessoa: ", aux2); //Mostra na tela
                         fflush(stdin);  //Limpa a memoria evitando problemas no scanf
                         scanf("%d", &pIdade[i]); //Coleta a idade de cada pessoa
                         
                         if(pIdade[i] < 3 || pIdade[i] > 100){ //idade não pode se menor que 3 anos e maior que 100 anos
-                            printf("\nIdade invalida\n"); //Mostra na tela
+                            printf("\nLamentamos, usuario... Idade invalida\n"); //Mostra na tela
                                 }else
                                     coletarPreco(&dinheiro, &aux3, &aux4); //chamada da função por referência coletando dinheiro e as variáveis auxiliares e exibe a opção de meio ou inteira
                                 
@@ -120,24 +119,24 @@ int main(){
 
                 }               
             //Segunda sessão
-            printf("\nQuantas pessoas vao assistir a segunda sessao: "); //Mostra na tela
+            printf("\nOlá, usuario! Seja bem vindo! Por favor, informe quantas pessoas vao assistir a segunda sessao: "); //Mostra na tela
             scanf("%d", &qPessoas2); //Coleta a quantidade de pessoas para a segunda sessão
             
             if(qPessoas2 < 10){ //Não aceita menos de 10 pessoas
-                printf("O numero minimo sao 10 pessoas"); //Mostra na tela
+                printf("Lamentamos... O numero minimo sao de 10 pessoas"); //Mostra na tela
                 }else{
                     for(i = 0 ; i < qPessoas2 ; i++){ //Loop para as coletas de informações de todas as  pessoas
-                        printf("Qual e o sexo da %d pessoa: o (M -masculino, F - Feminino): ", aux22); //Mostra na tela
+                        printf("Por favor, querido usuario, informe qual e o sexo da %d pessoa: o (M -masculino, F - Feminino): ", aux22); //Mostra na tela
                         fflush(stdin); //Limpa a memória evitando problemas no scanf
                         scanf("%c", &pSexo2[i]); //Coleta o sexo de cada pessoa para a segunda sessão
                         pSexo2[i] = toupper(pSexo2[i]); //Transforma o sexo do usuario toda em maiúsculo evitando erros em condicionais
 
-                        printf("Digite a idade da %d pessoa: ", aux22); //Mostra na tela
+                        printf("Agora, digite a idade da %d pessoa: ", aux22); //Mostra na tela
                         fflush(stdin); //Limpa a memória evitando problemas no scanf
                         scanf("%d", &pIdade2[i]); //Coleta a idade de cada pessoa da segunda sessão
                         
                         if(pIdade2[i] < 3 || pIdade2[i] > 100){ //idade não pode se menor que 3 anos e maior que 100 anos
-                            printf("\nIdade invalida\n"); //Mostra na tela
+                            printf("\nLamentamos, usuario... Idade invalida\n"); //Mostra na tela
                                 }else
                                     coletarPreco(&dinheiro2, &aux32, &aux42); //chamada da função por referência coletando dinheiro e as variáveis auxiliares e exibe a opção de meio ou inteira para a segunda sessão
                                 
@@ -177,9 +176,9 @@ int main(){
             printf("\n\n\n\n\nO filme e The Imitation Game\n"); //Mostra na tela
                     
                     for(i = 0; i <= qPessoas2; i++){ //Loop para a contagem de pessoas de cada sexo
-                        if(pSexo2[i] == 'M')
+                        if(pSexo2[i] == 'M') ////Conceito do capítulo 2: "Nomes Significativos" - Faça Distinções Diferentes (pág. 20) - "Usar números sequenciais em nomes (a1, a2, ...aN) é o oposto da seleção de nomes expressivos. Eles não geram confusão..."
                             qMasc2++;
-                        if(pSexo2[i] == 'F')
+                        if(pSexo2[i] == 'F') ////Conceito do capítulo 2: "Nomes Significativos" - Faça Distinções Diferentes (pág. 20) - Na linha 179 e 181 desse código, temos um calro exemplo disso.
                             qFemi2++;
                         
                     }
@@ -202,13 +201,13 @@ int main(){
             printf("\n\nO valor total arrecadado foi: %2.f", dinheiro + dinheiro2); //Mostra na tela
 
 
-            printf("\npressione qualquer tecla para finalizar:  "); //Mostra na tela
+            printf("\nPor gentileza, usuario, pressione qualquer tecla para finalizar:  "); //Mostra na tela
             getch(); //Usado para pausar o programa
             break; //Termina o case 2
 
 
     default: //Nenhuma condição atingida 
-            printf("\nSao no maximo 2 sessoes por dia"); //Mostra na tela
+            printf("\nDesculpe. Sao no maximo 2 sessoes por dia"); //Mostra na tela
             break; //Termina o default
     }
 }
@@ -219,7 +218,7 @@ float coletarPreco(float *d, int *aux3, int *aux4){ //Função coleta informaç�
     char resposta[10]; //Variável string
     int i; //Variável inteira
     
-    printf("Meia ou inteira? \n"); //Mostra na tela
+    printf("Usuario, sera meia ou inteira? \n"); //Mostra na tela
     fflush(stdin); //Limpa a memória para evitar erros no fgets
     fgets(resposta, 10, stdin); //colata a resposta do usuario e coloca na variavel resposta
     
@@ -233,7 +232,7 @@ float coletarPreco(float *d, int *aux3, int *aux4){ //Função coleta informaç�
             *d += 50.00; //Soma e coleta o dinheiro
             *aux4 += 1; //Conta a quantidade de inteiras
             }else
-                printf("\nResposta invalida\n"); //Se nenhuma condição foi atingida
+                printf("\nLamentamos, usuario... Resposta invalida\n"); //Se nenhuma condição foi atingida
 
 }
 
