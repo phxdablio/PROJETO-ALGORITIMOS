@@ -6,7 +6,7 @@ Nome: Pedro Henrique Oliveira Marques     Matrícula: UC22103216     Curso: Ciê
 
 #include <stdio.h> //IO = Input/Output
 #include <ctype.h> //toupper();
-#include <string.h> //srtcmp();
+#include <string.h> //strcmp();
 #include <conio.h> //getch();
 
 
